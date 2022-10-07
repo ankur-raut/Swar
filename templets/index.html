@@ -1,0 +1,786 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWAR</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'logo.png' %}">
+        <link rel="stylesheet" href="{% static 'modal.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        
+        <meta name="description" content="NCS is a Record Label dedicated to giving a platform to the next generation of Artists in electronic music, representing genres from house to dubstep via trap, drum &amp; bass, electro pop and more.">
+        
+        <link rel="canonical" href="https://ncs.io">
+        
+        <meta property="og:title" content="NCS (NoCopyrightSounds) - free music for content creators">
+        <meta property="og:description" content="NCS is a Record Label dedicated to giving a platform to the next generation of Artists in electronic music, representing genres from house to dubstep via trap, drum &amp; bass, electro pop and more.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://ncs.io">
+        <meta property="og:site_name" content="NCS">
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@ncsounds">
+        <meta name="twitter:title" content="NCS (NoCopyrightSounds) - free music for content creators">
+        <meta name="twitter:url" content="https://ncs.io">
+        <meta name="twitter:description" content="NCS is a Record Label dedicated to giving a platform to the next generation of Artists in electronic music, representing genres from house to dubstep via trap, drum &amp; bass, electro pop and more.">
+        
+            <meta property="og:image" content="https://ncs.io/static/web/img/logo-og.png?_m=1597301782">
+            <meta name="twitter:image" content="https://ncs.io/static/web/img/logo-og.png?_m=1597301782">
+            <meta name="twitter:image:alt" content="NCS">
+        
+        
+        
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "NCS",
+          "url": "https://ncs.io",
+          "logo": "https://ncs.io/static/web/images/logo-og.png?_m=0",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "darren+f1@netdreams.co.uk"
+          },
+          "sameAs": [
+            "https://www.facebook.com/NoCopyrightSounds","https://twitter.com/ncsounds","https://www.instagram.com/nocopyrightsounds/"
+          ]
+        }
+        </script>
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5PHGGZG');</script>
+        <!-- End Google Tag Manager -->
+        <style>
+            html {
+              scroll-behavior: smooth;
+            }
+            
+            .grid{
+              padding-left: 15px;
+              
+              display: grid;
+              grid-template-columns: 40% 40% 40%;
+            }
+            </style>
+            <style>
+                .card {
+                  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                  transition: 0.3s;
+                  width: 45%;
+                }
+                
+                .card:hover {
+                  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
+                
+                .container {
+                  padding: 2px 16px;
+                }
+                .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+                
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+} */
+
+/* nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+} */
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container_2{
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+   font-family: 'Varela Round', sans-serif;
+   display: flex;
+   margin: 23px auto;
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;
+   background-image: url('bg.jpg');
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }
+
+
+                </style>
+    </head>
+
+<body>
+    <header class="clearfix">
+        <a href="/" class="logo">
+            <img src="{% static 'logo.png'%}" style='width: 80px;'>
+        </a>
+        <a class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <nav>
+            <ul>
+                
+                <li>
+                    <a href="#lib">
+                        <img src="{% static 'image-removebg-preview (9).png'%}" alt="Music Library" style='width: 40px;'>
+                        <p>Music Library</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#artists">
+                        <img src="{% static 'artists.png'%}" alt="Artists" style='width: 40px;'>
+                        <p>Playlists</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#recommendation">
+                        <img src="{% static 'rec.png'%}" alt="Artists" style='width: 40px;'>
+                        <p>Recommendation</p>
+                    </a>
+                </li>
+    
+                  
+                
+            </ul>
+            <ul>
+                
+                <li>
+                    <a href="#about">
+                        <img src="{% static 'abtUS.png'%}" alt="About" style='width: 40px;' >
+                        <p>About</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <img src="{% static 'contact.png'%}" alt="Contact" style='width: 40px;' >
+                        <p>Contact</p>
+                    </a>
+                </li>
+            </ul>
+           
+        </nav>
+    </header>
+    <div style=" background: url({% static 'photo-1516450360452-9312f5e86fc7.jpg' %}) ">
+    <main>
+        <article class="module hero"><div class="slider"><div class="item" >
+            
+                                <div class="container-large h-100">
+                                <div class="row align-items-center h-100">
+                                <div class="col-lg-4">
+                                
+                                <h1>Music without limitations</h1>
+                                <h4>SWAR: Sa Re Ga Ma Pa Dha Ni Sa</h4>
+                                <div class="buttons">
+                                <a href="#lib" class="btn white">Open Music Library</a>
+                                
+                                
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                
+                                
+                                </div></div></article>
+        </main>
+    </div>
+    <div class="main" id="lib">
+      <h2>Music Library</h2>
+      
+
+<script>
+    var snd1 = new Audio("{% static '\songs\1.mp3' %}"); 
+    var snd2 = new Audio("{% static '\songs\2.mp3' %}"); 
+    var snd3 = new Audio("{% static '\songs\3.mp3' %}"); 
+    var snd4 = new Audio("{% static '\songs\4.mp3' %}"); 
+    var snd5 = new Audio("{% static '\songs\5.mp3' %}"); 
+    var snd6 = new Audio("{% static '\songs\6.mp3' %}"); 
+    var snd6 = new Audio("{% static '\songs\7.mp3' %}");
+    var snd6 = new Audio("{% static '\songs\8.mp3' %}");
+    var snd6 = new Audio("{% static '\songs\9.mp3' %}");
+    var snd6 = new Audio("{% static '\songs\10.mp3' %}");
+</script>
+      <div class="container_2">
+        <div class="songList">
+            <h1>Songs</h1>
+            <div class="songItemContainer">
+              <div class="songItem">
+                <img alt="{% static 'static\covers\1.jpg'%}">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i> <button onclick="snd1.play()"> Play </button>
+                    <button onclick="snd1.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd2.play()"> Play </button>
+                    <button onclick="snd2.pause()"> stop </button>
+                </span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd3.play()"> Play </button>
+                    <button onclick="snd3.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i> 
+                    <button onclick="snd4.play()"> Play </button>
+                    <button onclick="snd4.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd5.play()"> Play </button>
+                    <button onclick="snd5.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd6.play()"> Play </button>
+                    <button onclick="snd6.pause()"> stop </button> </span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd7.play()"> Play </button>
+                    <button onclick="snd7.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd8.play()"> Play </button>
+                    <button onclick="snd8.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd9.play()"> Play </button>
+                    <button onclick="snd9.pause()"> stop </button></span></span>
+            </div>
+            <div class="songItem">
+                <img alt="1">
+                <span class="songName">Let me Love You</span>
+                <span class="songlistplay"><span class="timestamp"><i id="0" class=""></i>
+                    <button onclick="snd10.play()"> Play </button>
+                    <button onclick="snd10.pause()"> stop </button></span></span>
+            </div>
+        
+                
+            
+                
+            </div>
+        </div>
+        <div class="songBanner"></div>
+      </div>
+      
+    </div>
+    <div class="main" id="artists">
+        <h2>Playlists</h2>
+        
+        <div class="grid-container">
+          <div class="grid-item"> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWUa8ZRTfalHk?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUfTFmNBRM?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa6iPZDThhLh?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>  
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/43mTFxSHXF7Xtvjx4TF0Dc?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6ZcvVBPQ2ToLXEWVbaw59P?utm_source=generator&theme=0" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1jBNbPVlGUen3sWdd25ho6?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>  
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6Ku8YjPn083721Pr31oSO9?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2locirv8HzqrvEti5XonTF?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>
+          <div class="grid-item"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6ZCgc7rpiPILwDZmOOAT2c?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>  
+        </div>
+      </div>
+      
+      <div class="main" id="recommendation">
+        <h2>Music Recommendation</h2>
+        <form action="songInput" method="post">
+            {% csrf_token %} 
+            <input type="text" name="name" id="name" placeholder="Song Name">
+            <input type="text" name="year" id="year" placeholder="Year of Release">
+            <input type="submit" value="submit">
+            
+        </form>
+        
+
+      </div>
+      <div>
+         
+        <div class="grid">
+          
+          {% for each in result %}
+        
+          <div class="card">
+            <img src="{% static 'music.jpg'%}" alt="Avatar" style="width:100%">
+            <div class="container">
+
+              <!-- model -->
+              
+              <!-- end model -->
+              
+              {% for key,value in each.items %}
+              <b>{{key}}</b>
+              <p>{{value}}</p>
+              
+              {% endfor %} 
+            </div>
+          </div>
+          
+          {% endfor %}
+          
+        </div>
+        
+        <!-- modal box -->
+        <!-- <div class="center">
+            <input type="checkbox" id="click">
+            <label for="click" class="click-me">Click Me</label>
+            <div class="content">
+              <div class="header">
+                <h2>Modal Popup</h2>
+                <label for="click" class="fas fa-times"></label>
+              </div>
+              <label for="click" class="fas fa-check"></label>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, cum!</p>
+              <div class="line"></div>
+              <label for="click" class="close-btn">Close</label>
+            </div>
+          </div>
+        
+      </div> -->
+
+      <!-- modal box 2 -->
+    <!-- Trigger/Open The Modal -->
+
+
+<!-- hide -->
+
+	
+
+<!-- hide -->
+
+
+      
+      <div class="main" id="about">
+        <h2>About us</h2>
+        Swar is one of the most smartest Website to play music and get Song recommendations at the same time.
+        <br>
+        It gives you a section of playlists where you can play various playlists according to your choice and enjoy music at its best!
+      </div>
+      
+<footer class="footer" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>online shop</h4>
+              <ul>
+                <li><a href="#">watch</a></li>
+                <li><a href="#">bag</a></li>
+                <li><a href="#">shoes</a></li>
+                <li><a href="#">dress</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </footer>
+     <!-- <script src="{% static 'songs.js'%}"></script> -->
+     <script>
+      console.log("Welcome to Spotify");
+
+// Initialize the Variables
+let songIndex = 0;
+let audioElement = new Audio('songs/1.mp3');
+let masterPlay = document.getElementById('masterPlay');
+let myProgressBar = document.getElementById('myProgressBar');
+let gif = document.getElementById('gif');
+let masterSongName = document.getElementById('masterSongName');
+let songItems = Array.from(document.getElementsByClassName('songItem'));
+
+let songs = [
+    {songName: "Warriyo - Mortals [NCS Release]", filePath: "{% static 'songs\1.mp3' %}", coverPath: "{% static 'covers\1.jpg' %}"},
+    {songName: "Cielo - Huma-Huma", filePath: "{% static 'songs/2.mp3'%}", coverPath: "{% static 'covers\2.jpg' %}"},
+    {songName: "DEAF KEV - Invincible [NCS Release]-320k", filePath: "songs/3.mp3", coverPath: "{% static 'covers\2.jpg' %}"},
+    {songName: "Different Heaven & EH!DE - My Heart [NCS Release]", filePath: "songs/4.mp3", coverPath: "{% static 'covers\3.jpg' %}"},
+    {songName: "Janji-Heroes-Tonight-feat-Johnning-NCS-Release", filePath: "songs/5.mp3", coverPath: "{% static 'covers\4.jpg' %}"},
+    {songName: "Rabba - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "{% static 'covers\5.jpg' %}"},
+    {songName: "Sakhiyaan - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "{% static 'covers\6.jpg' %}"},
+    {songName: "Bhula Dena - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "{% static 'covers\7.jpg' %}"},
+    {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "songs/2.mp3", coverPath: "{% static 'covers\8.jpg' %}"},
+    {songName: "Na Jaana - Salam-e-Ishq", filePath: "songs/4.mp3", coverPath: "{% static 'covers\9.jpg' %}"},
+]
+
+songItems.forEach((element, i)=>{ 
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
+})
+ 
+
+// Handle play/pause click
+masterPlay.addEventListener('click', ()=>{
+    if(audioElement.paused || audioElement.currentTime<=0){
+        audioElement.play();
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+        gif.style.opacity = 1;
+    }
+    else{
+        audioElement.pause();
+        masterPlay.classList.remove('fa-pause-circle');
+        masterPlay.classList.add('fa-play-circle');
+        gif.style.opacity = 0;
+    }
+})
+// Listen to Events
+audioElement.addEventListener('timeupdate', ()=>{ 
+    // Update Seekbar
+    progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
+    myProgressBar.value = progress;
+})
+
+myProgressBar.addEventListener('change', ()=>{
+    audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
+})
+
+const makeAllPlays = ()=>{
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+        element.classList.remove('fa-pause-circle');
+        element.classList.add('fa-play-circle');
+    })
+}
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+    element.addEventListener('click', (e)=>{ 
+        makeAllPlays();
+        songIndex = parseInt(e.target.id);
+        e.target.classList.remove('fa-play-circle');
+        e.target.classList.add('fa-pause-circle');
+        audioElement.src = `songs/${songIndex+1}.mp3`;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+    })
+})
+
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=9){
+        songIndex = 0
+    }
+    else{
+        songIndex += 1;
+    }
+    audioElement.src = `songs/${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+
+})
+
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<=0){
+        songIndex = 0
+    }
+    else{
+        songIndex -= 1;
+    }
+    audioElement.src = `songs/${songIndex+1}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play-circle');
+    masterPlay.classList.add('fa-pause-circle');
+})
+     </script>
+
+
+<script>
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+
+</html>
